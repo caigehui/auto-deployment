@@ -1,7 +1,6 @@
 /* eslint valid-jsdoc: "off" */
 
-"use strict";
-const path = require("path");
+'use strict';
 
 /**
  * @param {Egg.EggAppInfo} appInfo app info
@@ -12,27 +11,27 @@ module.exports = appInfo => {
    * @type {Egg.EggAppConfig}
    **/
   const config = {
-    token: "auto-deployment?"
+    token: 'auto-deployment?',
   };
 
   // use for cookie sign key, should change to your own and keep security
-  config.keys = appInfo.name + "_1552269334860_2167";
+  config.keys = appInfo.name + '_1552269334860_2167';
 
   // add your middleware config here
   config.middleware = [];
 
   config.view = {
-    defaultExt: ".html",
+    defaultExt: '.html',
     mapping: {
-      ".ejs": "ejs",
-      ".html": "ejs"
-    }
+      '.ejs': 'ejs',
+      '.html': 'ejs',
+    },
   };
 
   config.security = {
     csrf: {
-      enable: false
-    }
+      enable: false,
+    },
   };
 
   // add your user config here
@@ -42,6 +41,6 @@ module.exports = appInfo => {
 
   return {
     ...config,
-    ...userConfig
+    ...userConfig,
   };
 };

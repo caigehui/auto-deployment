@@ -5,6 +5,6 @@ exports.ejs = {
   package: 'egg-view-ejs',
 };
 
-exports.static ={
-  enable: true
-}
+exports.static = {
+  enable: true,
+};
